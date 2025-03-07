@@ -1,0 +1,282 @@
+/* Variables de color */
+:root {
+    --bg-color: #E8E8E8;      /* Fondo del contenido */
+    --text-color: #5e5e5e;    /* Texto principal */
+    --accent-color: #5e3a2a;  /* Acentos marrón oscuro */
+    --project-bg: #D3D3D3;    /* Fondo más oscuro para los contenedores de proyectos */
+}
+
+/* Fondo de la página con efecto viñeta */
+body {
+    background-image: url('../img/fondo.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen rellene completamente */
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: var(--bg-color);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 20px;
+    max-width: 1000px; /* Aproximado al diseño original */
+    margin: 0 auto;
+}
+
+
+/* Ajuste del margen en formato PC */
+@media (min-width: 769px) {
+    .container {
+        margin-top: 4%; /* Margen superior del 4% en pantallas grandes */
+        margin-bottom: 4%;
+        margin-left: auto; /* Mantiene el centrado horizontal */
+        margin-right: auto; /* Mantiene el centrado horizontal */
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 220px; /* Reescalado basado en la referencia aproximada */
+        border-top-right-radius: 10px; /* Redondea las esquinas de la imagen */
+        border-bottom-right-radius: 10px;
+        margin: -14.9px; /* Elimina márgenes para que se pegue al borde */
+    }
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 20px;
+    font-weight: 300; /* Corregido el valor 3700, que no es válido */
+    color: var(--text-color);
+    margin-left: -600px;
+}
+
+/* Navegación */
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Tarjetas de proyectos */
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+/* Contenedor oscuro para cada proyecto y formulario */
+.project-container {
+    background-color: var(--project-bg); /* Fondo gris claro como en la referencia */
+    border-radius: 10px; /* Esquinas redondeadas como en la referencia */
+    padding: 15px; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Ajustes para el card-body dentro del contenedor oscuro */
+.card-body {
+    padding: 0; /* Elimina padding por defecto para que el project-container lo controle */
+}
+
+.number-indicator {
+    color: var(--accent-color);
+    font-size: 80px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -2px; /* Reduce el espacio entre caracteres */
+}
+
+.description {
+    color: rgb(27, 27, 27); /* Ajustado para un gris más oscuro que coincida con la referencia */
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.project-name {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.case-study-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Estilos específicos para el formulario en contact.html */
+.form-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    background-color: var(--project-bg); /* Fondo gris claro como las tarjetas */
+    border: 1px solid var(--text-color); /* Borde gris */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    color: rgb(27, 27, 27); /* Color del texto dentro de los inputs */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color); /* Resalta con el acento al enfocar */
+    box-shadow: none;
+}
+
+textarea.form-control {
+    resize: vertical; /* Permite ajustar solo verticalmente */
+    min-height: 100px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color); /* Botón con color de acento */
+    border: none;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    padding: 10px 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #4a2c20; /* Tono más oscuro al pasar el ratón */
+    color: #fff;
+}
+
+.favicon {
+    height: 45px; /* Tamaño inicial del favicon */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 0px; /* Espacio entre el favicon y el logo */
+    border-radius: 50%;
+}
+
+@media (max-width: 769px) {
+
+    .project-image {
+        width: 100%;
+        max-width: 220px; /* Reescalado basado en la referencia aproximada */
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+}
+
+/* Columna de la imagen */
+.col-md-4 {
+    display: flex;
+    justify-content: flex-end; /* Alinea la imagen al extremo derecho */
+    align-items: stretch; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    padding: 0; /* Elimina padding para que la imagen se pegue al borde */
+}
+
+/* Galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+
+    .favicon {
+        height: 35px; /* Reduce el tamaño en mobile */
+        border-radius: 50%;
+    }
+    .logo {
+        font-size: 20px; /* Reducir tamaño en mobile */
+        font-weight: 600;
+        margin-left: -12px;
+        
+    }
+
+    nav a {
+        margin-left: 10px; /* Menos espacio en mobile */
+    }
+
+    h1 {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 28px; /* Reducir título */
+    }
+
+    .project-container {
+        padding: 10px; /* Reducir padding en mobile */
+    }
+
+    .col-md-4 {
+        justify-content: center; /* Centra la imagen en mobile */
+    }
+
+    .project-image {
+        max-width: 100%; /* Imagen ocupa todo el ancho en mobile */
+        margin-bottom: 10px; /* Pequeño margen inferior en mobile */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajustar galería */
+    }
+}
+
+/* Galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 7px; /* Espaciado uniforme entre imágenes */
+    margin-top: 20px; /* Espacio desde el título */
+    margin: 30px;
+}
+
+.gallery-image {
+    width: 100%; /* Ocupa todo el ancho de su celda */
+    border-radius: 1px; /* Bordes redondeados al estilo Instagram */
+    object-fit: cover; /* Asegura que las imágenes se escalen proporcionalmente */
+    aspect-ratio: 1; /* Relación de aspecto 1:1 como en Instagram */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta a 1 columna en mobile */
+        gap: 5px; /* Reduce el espaciado en mobile */
+    }
+
+    .gallery-image {
+        aspect-ratio: 1; /* Mantiene la relación 1:1 */
+    }
+}
