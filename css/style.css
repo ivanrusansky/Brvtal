@@ -44,15 +44,15 @@ body {
         border-bottom-right-radius: 10px;
         margin: -14.9px; /* Elimina márgenes para que se pegue al borde */
     }
+
+    .logo {
+        font-size: 20px;
+        font-weight: 300; /* Corregido el valor 3700, que no es válido */
+        color: var(--text-color);
+        margin-left: -800px !important;
+    }
 }
 
-/* Estilo del logo */
-.logo {
-    font-size: 20px;
-    font-weight: 300; /* Corregido el valor 3700, que no es válido */
-    color: var(--text-color);
-    margin-left: -600px;
-}
 
 /* Navegación */
 nav a {
