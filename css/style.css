@@ -23,10 +23,10 @@ body {
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     padding: 20px;
-    max-width: 1000px; /* Aproximado al diseño original */
+    max-width: 1200px; /* Aumentado para permitir más ancho */
     margin: 0 auto;
+    width: 95%; /* Ocupa el 95% del ancho de la pantalla en mobile */
 }
-
 
 /* Ajuste del margen en formato PC */
 @media (min-width: 769px) {
@@ -183,7 +183,6 @@ textarea.form-control {
 }
 
 @media (max-width: 769px) {
-
     .project-image {
         width: 100%;
         max-width: 220px; /* Reescalado basado en la referencia aproximada */
@@ -203,27 +202,30 @@ textarea.form-control {
 /* Galería */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 7px; /* Espaciado uniforme entre imágenes */
+    margin-top: 20px; /* Espacio desde el título */
+    margin: 30px;
 }
 
 .gallery-image {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%; /* Ocupa todo el ancho de su celda */
+    border-radius: 1px; /* Bordes redondeados al estilo Instagram */
+    object-fit: cover; /* Asegura que las imágenes se escalen proporcionalmente */
+    aspect-ratio: 1; /* Relación de aspecto 1:1 como en Instagram */
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-
     .favicon {
-        height: 35px; /* Reduce el tamaño en mobile */
+        height: 35px !important; /* Reduce el tamaño en mobile */
         border-radius: 50%;
+        margin-right: 5px;
     }
     .logo {
-        font-size: 20px; /* Reducir tamaño en mobile */
+        font-size: 22px; /* Reducir tamaño en mobile */
         font-weight: 600;
-        margin-left: -12px;
-        
+        margin-left: -8px;
     }
 
     nav a {
@@ -248,35 +250,20 @@ textarea.form-control {
         margin-bottom: 10px; /* Pequeño margen inferior en mobile */
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajustar galería */
+    .container {
+        width: 100%; /* Ocupa todo el ancho en mobile */
+        padding: 10px; /* Reduce padding lateral para más espacio */
+        margin: 0; /* Elimina márgenes automáticos */
     }
-}
 
-/* Galería */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
-    gap: 7px; /* Espaciado uniforme entre imágenes */
-    margin-top: 20px; /* Espacio desde el título */
-    margin: 30px;
-}
-
-.gallery-image {
-    width: 100%; /* Ocupa todo el ancho de su celda */
-    border-radius: 1px; /* Bordes redondeados al estilo Instagram */
-    object-fit: cover; /* Asegura que las imágenes se escalen proporcionalmente */
-    aspect-ratio: 1; /* Relación de aspecto 1:1 como en Instagram */
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta a 1 columna en mobile */
-        gap: 5px; /* Reduce el espaciado en mobile */
+        grid-template-columns: 1fr; /* Una sola columna en mobile */
+        gap: 5px; /* Margen de 5px entre imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
     }
 
     .gallery-image {
         aspect-ratio: 1; /* Mantiene la relación 1:1 */
+        min-width: 200px; /* Imágenes grandes */
     }
 }
