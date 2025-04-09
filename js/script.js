@@ -24,3 +24,31 @@ const projects = [
         description: 'Habitation Towers represents a visionary approach to urban living, combining functionality, sustainability, and aesthetic boldness in a residential complex that redefines the concept of high-rise living. Initiated in 2020 and completed in late 2023, this project was a collaborative effort led by Brvtal’s co-founder, Pedro Santos, alongside a team of architects, urban planners, and sustainability consultants. The client, a Lisbon-based housing cooperative, aimed to create a residential development that could address the city’s growing housing needs while offering residents a sense of community and connection to nature. The design process began with a comprehensive study of the site, located on the outskirts of Lisbon, where the team identified opportunities to integrate green spaces into the vertical structure. The result is a pair of interconnected towers, each featuring a series of cantilevered concrete platforms that serve as communal gardens, providing residents with access to greenery at every level. The towers are constructed using a combination of precast concrete panels and sustainable timber, a nod to Brvtal’s commitment to environmentally responsible design. One of the main challenges was ensuring that the cantilevered platforms could support the weight of the gardens while maintaining the structural integrity of the towers—a feat achieved through advanced engineering and the use of lightweight, high-strength materials. The interiors of the apartments were designed with flexibility in mind, allowing residents to customize their living spaces to suit their needs. Energy efficiency was a key focus, with the towers incorporating passive solar design, cross-ventilation, and a geothermal heating system to minimize their environmental impact. The project also involved extensive community engagement, with workshops held to gather input from future residents, ensuring that the design met their practical and emotional needs. Since its completion, Habitation Towers has been hailed as a model for sustainable urban living, offering a harmonious blend of brutalist aesthetics, innovative engineering, and community-focused design.'
     }
 ];
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    // Mostrar el lightbox al hacer clic en una imagen
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = 'flex'; // Muestra el lightbox
+        });
+    });
+
+    // Ocultar el lightbox al hacer clic en la "X"
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+
+    // Ocultar el lightbox al hacer clic en el fondo
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});

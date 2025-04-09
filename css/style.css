@@ -2,33 +2,43 @@
 :root {
     --bg-color: #E8E8E8;      /* Fondo del contenido */
     --text-color: #5e5e5e;    /* Texto principal */
-    --accent-color:  #5e3724c4;  /* Acentos marrón oscuro */
+    --accent-color: #5e3724c4;  /* Acentos marrón oscuro */
     --project-bg: #D3D3D3;    /* Fondo más oscuro para los contenedores de proyectos */
 }
 
 /* Fondo de la página con efecto viñeta y márgenes externos */
 body {
-    background-image: url('../img/fondo.jpg'); /* Ruta a la imagen de fondo */
-    background-size: cover; /* Asegura que la imagen rellene completamente */
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
     margin: 0;
-    padding: 4% 2%; /* Margen del 4% arriba/abajo y 2% a los lados */
-    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
-    display: flex; /* Para centrar el .container */
-    justify-content: center; /* Centrado horizontal */
+    padding: 4% 2%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 /* Contenedor principal (rectángulo del contenido) */
 .container {
     background-color: var(--bg-color);
-    width: 100% !important; /* Ocupa el 95% del ancho disponible */
-    max-width: 1200px; /* Ancho máximo */
-    min-height: calc(100vh - 8%); /* Altura mínima ajustada por los márgenes del body */
-    padding: 20px; /* Espacio interno uniforme */
+    width: 100% !important;
+    max-width: 1200px;
+    min-height: calc(100vh - 8%);
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Apila header, main y footer */
-    justify-content: space-between; /* Footer al final */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos para los enlaces del logo y favicon (eliminar raya azul) */
+a[href="/index.html"] {
+    text-decoration: none; /* Elimina el subrayado azul */
+    color: inherit; /* Hereda el color del elemento hijo para evitar cambios */
+}
+
+a[href="/index.html"]:hover {
+    text-decoration: none; /* Asegura que no aparezca al pasar el ratón */
 }
 
 /* Ajuste del margen en formato PC */
@@ -42,14 +52,18 @@ body {
         max-width: 220px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        margin: -14.9px;
+        margin: -0px;
+        margin-top: -6.5%;
+        margin-bottom: -6.5%;
+        margin-left: 6%;
+        
     }
 
     .logo {
         font-size: 20px;
         font-weight: 300;
         color: var(--text-color);
-        margin-left: -60% !important;
+        margin-left: -260px;
     }
 }
 
@@ -114,7 +128,7 @@ h1 {
 .project-name {
     font-size: 27px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
     margin-left: 10px;
     color: #0f0d0cf5;
 }
@@ -122,7 +136,7 @@ h1 {
 .case-study-link {
     color: var(--accent-color);
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 17px;
     margin-left: 10px;
 }
 
@@ -218,35 +232,35 @@ textarea.form-control {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        padding: 5% !important; /* Padding del body en móvil */
-        margin: 1% !important; /* Margen del body en móvil */
-        background-image: none !important; /* Oculta el fondo del body */
-        background-color: var(--bg-color) !important; /* Usa el mismo color que el contenedor */
-        min-height: 100vh; /* Asegura que ocupe toda la altura */
-        display: block !important; /* Cambia a block para evitar problemas con flex */
+        padding: 5% !important;
+        margin: 1% !important;
+        background-image: none !important;
+        background-color: var(--bg-color) !important;
+        min-height: 100vh;
+        display: block !important;
     }
 
     .container {
-        width: 100% !important; /* Asegura que el contenedor ocupe todo el ancho */
-        max-width: 100% !important; /* Elimina el límite de ancho */
-        padding: 0 !important; /* Elimina el padding del contenedor */
-        margin: 0 !important; /* Elimina cualquier margen */
-        min-height: 100vh !important; /* Asegura que ocupe toda la altura */
-        background-color: var(--bg-color) !important; /* Refuerza el fondo */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 100vh !important;
+        background-color: var(--bg-color) !important;
     }
 
     .favicon {
         height: 35px !important;
         border-radius: 50%;
         margin-right: 5px;
-        margin-top: -30%;
+        margin-top: -300% !important;
     }
     .logo {
         font-size: 22px;
         font-weight: 600;
-        margin-left: -140px;
+        margin-left: -70px;
         margin-right: -10px !important;
-        margin-top: -30%;
+        margin-top: -33%;
     }
 
     nav a {
@@ -288,8 +302,8 @@ textarea.form-control {
     border-radius: 10px;
     padding: 40px;
     margin-bottom: 20px;
-    margin-right: 0; /* Eliminado para maximizar el espacio */
-    width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+    margin-right: 0;
+    width: 100%;
 }
 
 .about-section h2 {
@@ -310,18 +324,18 @@ textarea.form-control {
 
 .about-image {
     display: flex;
-    flex-direction: row;    /* Asegura que las imágenes se alineen horizontalmente */
-    width: 100%;            /* Usa todo el espacio disponible */
-    gap: 0px !important;    /* Espacio entre imágenes */
-    justify-content: space-between; /* Distribuye las imágenes uniformemente */
+    flex-direction: row;
+    width: 100%;
+    gap: 0px !important;
+    justify-content: space-between;
 }
 
 .about-image img {
-    width: calc(28% - 10px); /* 100% ÷ 5 imágenes = 20%, menos el espacio del gap */
+    width: calc(28% - 10px);
     margin-left: -1.7%;
     margin-bottom: -1.7%;
-    height: auto;          /* Mantiene la proporción */
-    object-fit: cover;     /* Asegura que la imagen se ajuste bien */
+    height: auto;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -349,16 +363,16 @@ textarea.form-control {
 
 @media (max-width: 480px) {
     .about-image img {
-        width: calc(50% - 5px); /* 2 imágenes por fila en pantallas muy pequeñas */
+        width: calc(50% - 5px);
     }
 }
 
 /* Estilos para el footer */
 .footer {
-    background: linear-gradient(90deg, #0c0705cb 0%, #16100d6c 100%); /* Gradiente de negro a marrón oscuro */
+    background: linear-gradient(90deg, #0c0705cb 0%, #16100d6c 100%);
     padding: 20px;
     text-align: center;
-    width: 103.5%; /* Ocupa todo el ancho del .container */
+    width: 103.5%;
     margin-left: -1.7%;
     margin-top: 1.7%;
     margin-bottom: -1.7%;
@@ -387,7 +401,7 @@ textarea.form-control {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Elimina subrayado en footer también */
 }
 
 .footer-links a:hover {
@@ -403,10 +417,10 @@ textarea.form-control {
 @media (max-width: 768px) {
     .footer {
         padding: -10%;
-        width: 115%; /* Aumenta el ancho para exceder los márgenes del body (5% padding + 1% margin por lado = 6% x 2 = 12% adicional) */
-        margin-left: -7%; /* Margen negativo para compensar el padding y margin del body */
-        margin-right: -10%; /* Margen negativo para compensar el padding y margin del body */
-        margin-top: 5%; /* Margen superior del 5%, como se solicitó anteriormente */
+        width: 115%;
+        margin-left: -7%;
+        margin-right: -10%;
+        margin-top: 5%;
         margin-bottom: -11%;
     }
 
@@ -430,19 +444,16 @@ textarea.form-control {
     #project-title {
         margin-top: 20%;
         font-size: 30px !important;
-
-    
     }
 }
 
 /* Ajuste para el main */
 main {
-    flex-grow: 1; /* El main crece para empujar el footer abajo */
+    flex-grow: 1;
 }
 
 /* Estilos para casestudy.html */
 .case-study-container {
-    
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -451,7 +462,6 @@ main {
 #project-image {
     width: 100%;
     height: auto;
-   
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -459,10 +469,9 @@ main {
     font-family: 'Roboto Mono', monospace;
     font-size: 48px;
     text-align: end;
-    font-weight:900;
+    font-weight: 900;
     margin-bottom: 20px;
     color: #0f0d0cf5;
-
 }
 
 #project-description {
@@ -473,4 +482,40 @@ main {
     line-height: 1.6;
     color: rgb(27, 27, 27);
     text-align: justify;
+}
+
+/* Estilos del lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.7); /* Fondo gris claro semi-transparente */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 2px solid #fff;
+}
+
+.close {
+    position: absolute;
+    top: 15px; /* Más arriba para no invadir tanto */
+    right: 20px; /* Más a la derecha */
+    color: #f7f7f7; /* Gris claro para discreción */
+    font-size: 50px; /* Tamaño más pequeño y fino */
+    font-weight: normal; /* Sin grosor excesivo */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--accent-color); /* Usamos el color de acento definido en :root */
 }
