@@ -62,7 +62,6 @@ a[href="/index.html"]:hover {
         font-size: 20px;
         font-weight: 300;
         color: var(--text-color);
-        margin-left: -260px;
         text-decoration: none !important;
     }
 
@@ -72,20 +71,32 @@ a[href="/index.html"]:hover {
         padding: 40px;
     }
 
-    
-
     /* Remove gutter spacing between columns in the row containing about-sections */
     .row:has(.about-section) {
         --bs-gutter-x: 0;
     }
 
-    .pctext{
+    .pctext {
         display: flex;
     }
 
-    .about-section2{
+    .about-section2 {
         display: none;
     }
+}
+
+/* Ajustes al header para alinear favicon y logo */
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio pequeño entre favicon y logo */
+}
+
+/* Estilos para el favicon */
+.favicon {
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
 }
 
 /* Navegación */
@@ -210,13 +221,6 @@ textarea.form-control {
     color: #fff;
 }
 
-.favicon {
-    height: 45px;
-    width: auto;
-    margin-right: 0px;
-    border-radius: 50%;
-}
-
 @media (max-width: 769px) {
     .project-image {
         width: 100%;
@@ -278,16 +282,17 @@ textarea.form-control {
     .favicon {
         height: 35px !important;
         border-radius: 50%;
-        margin-top: -300% !important;
-        margin-right: -10;
     }
+
     .logo {
         font-size: 22px;
         font-weight: 600;
-        margin-left: -32%;
-        margin-top: -23%;
         color: var(--text-color);
         text-decoration: none !important;
+    }
+
+    header {
+        gap: 8px; /* Espacio más pequeño en móviles */
     }
 
     nav a {
@@ -323,7 +328,7 @@ textarea.form-control {
         min-width: 200px;
     }
 
-    .footerindex{
+    .footerindex {
         margin-top: -3% !important;
     }
 
@@ -345,33 +350,33 @@ textarea.form-control {
         display: none;
     }
 
-    .pctext{
-display: none;
+    .pctext {
+        display: none;
     }
 
     .about-section2 {
-    border-radius: 10px;
-    padding: 40px;
-    margin-bottom: 20px;
-    margin-right: 0;
-    width: 100%;
-}
+        border-radius: 10px;
+        padding: 40px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 100%;
+    }
 
-.about-section2 h2 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
+    .about-section2 h2 {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--text-color);
+        margin-bottom: 10px;
+    }
 
-.about-section2 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: rgb(27, 27, 27);
-    margin-bottom: 5px;
-    text-align: justify;
-}
+    .about-section2 p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: rgb(27, 27, 27);
+        margin-bottom: 5px;
+        text-align: justify;
+    }
 }
 
 /* Estilos para index.html */
@@ -421,9 +426,11 @@ display: none;
         margin-bottom: 40px;
         margin-right: 0;
     }
+
     .about-image {
         display: block;
     }
+
     .about-image img {
         margin: 2%;
         padding: 0%;
@@ -453,6 +460,16 @@ display: none;
     margin-left: -1.7%;
     margin-top: 1.7%;
     margin-bottom: -1.7%;
+}
+
+.footer2 {
+    background: linear-gradient(90deg, #0c0705cb 0%, #16100d6c 100%);
+    padding: 20px;
+    text-align: center;
+    width: 103.5%;
+    margin-left: -1.7%;
+    margin-top: 1.7%;
+    margin-bottom: -1.77%;
 }
 
 .footer-content {
@@ -491,18 +508,17 @@ display: none;
     color: #ccc;
 }
 
-.footer2 {
-    background: linear-gradient(90deg, #0c0705cb 0%, #16100d6c 100%);
-    padding: 20px;
-    text-align: center;
-    width: 103.5%;
-    margin-left: -1.7%;
-    margin-top: 1.7%;
-    margin-bottom: -1.77%;
-}
-
 @media (max-width: 768px) {
     .footer {
+        padding: -10%;
+        width: 115%;
+        margin-left: -7%;
+        margin-right: -10%;
+        margin-top: 5%;
+        margin-bottom: -11%;
+    }
+
+    .footer2 {
         padding: -10%;
         width: 115%;
         margin-left: -7%;
