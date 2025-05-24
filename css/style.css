@@ -55,7 +55,7 @@ header {
     font-weight: 300;
     color: var(--text-color);
     text-decoration: none !important;
-    margin-left: 3% !important;
+    margin-left: 1% !important;
 }
 
 .logotext {
@@ -322,6 +322,7 @@ textarea.form-control {
         color: var(--text-color);
         text-decoration: none !important;
         margin-bottom: 45%;
+        margin-left: 3% !important;
     }
 
     header {
