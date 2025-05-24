@@ -1,9 +1,9 @@
 /* Variables de color */
 :root {
-    --bg-color: #E8E8E8;      /* Fondo del contenido */
-    --text-color: #5e5e5e;    /* Texto principal */
-    --accent-color: #5e3724c4;  /* Acentos marrón oscuro */
-    --project-bg: #D3D3D3;    /* Fondo más oscuro para los contenedores de proyectos */
+    --bg-color: #E8E8E8;
+    --text-color: #5e5e5e;
+    --accent-color: #5e3724c4;
+    --project-bg: #D3D3D3;
 }
 
 /* Fondo de la página con efecto viñeta y márgenes externos */
@@ -31,18 +31,55 @@ body {
     justify-content: space-between;
 }
 
+/* Ajustes al header para eliminar separación */
+header {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Elimina cualquier espacio entre elementos */
+    padding: 0; /* Elimina el padding vertical predeterminado de Bootstrap */
+}
+
+/* Estilos para el favicon y el logo */
+.favicon {
+
+    height: 45px;
+    border-radius: 50%;
+
+}
+
+
+
+.logo {
+
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+    text-decoration: none !important;
+    margin-left: 3% !important;
+}
+
+.logotext {
+    margin: 0; /* Asegura que no haya margen interno en el texto */
+}
+
 /* Estilos para los enlaces del logo y favicon (eliminar raya azul) */
 a[href="/index.html"] {
-    text-decoration: none; /* Elimina el subrayado azul */
-    color: inherit; /* Hereda el color del elemento hijo para evitar cambios */
+    text-decoration: none;
+    color: inherit;
 }
 
 a[href="/index.html"]:hover {
-    text-decoration: none; /* Asegura que no aparezca al pasar el ratón */
+    text-decoration: none;
 }
 
 /* Ajuste del margen en formato PC */
 @media (min-width: 769px) {
+
+    nav {
+        margin-left:63%;
+        display: flex;
+    }
+
     .container {
         padding: 20px;
     }
@@ -85,25 +122,14 @@ a[href="/index.html"]:hover {
     }
 }
 
-/* Ajustes al header para alinear favicon y logo */
-header {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio pequeño entre favicon y logo */
-}
-
-/* Estilos para el favicon */
-.favicon {
-    height: 45px;
-    width: auto;
-    border-radius: 50%;
-}
-
 /* Navegación */
+
+
 nav a {
+    
     color: var(--text-color);
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 5%;
 }
 
 nav a:hover {
@@ -270,6 +296,7 @@ textarea.form-control {
         display: block !important;
     }
 
+
     .container {
         width: 100% !important;
         max-width: 100% !important;
@@ -282,6 +309,11 @@ textarea.form-control {
     .favicon {
         height: 35px !important;
         border-radius: 50%;
+    
+    }
+
+    .faviconspace{
+        margin-bottom: 45%;
     }
 
     .logo {
@@ -289,14 +321,21 @@ textarea.form-control {
         font-weight: 600;
         color: var(--text-color);
         text-decoration: none !important;
+        margin-bottom: 45%;
     }
 
     header {
-        gap: 8px; /* Espacio más pequeño en móviles */
+        gap: 0; /* Sin espacio en móviles */
+    }
+
+    nav{
+        margin-left: 48%;
+        margin-bottom: 15%;
     }
 
     nav a {
-        margin-left: 10px;
+        margin-left:0%;
+        
     }
 
     h1 {
@@ -495,7 +534,7 @@ textarea.form-control {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #fff;
-    text-decoration: none; /* Elimina subrayado en footer también */
+    text-decoration: none;
 }
 
 .footer-links a:hover {
@@ -589,15 +628,15 @@ main {
 
 /* Estilos del lightbox */
 .lightbox {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.7); /* Fondo gris claro semi-transparente */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    background-color: rgba(128, 128, 128, 0.7);
+    backdrop-filter: blur(5px);
     align-items: center;
     justify-content: center;
 }
@@ -611,14 +650,14 @@ main {
 
 .close {
     position: absolute;
-    top: 15px; /* Más arriba para no invadir tanto */
-    right: 20px; /* Más a la derecha */
-    color: #f7f7f7; /* Gris claro para discreción */
-    font-size: 50px; /* Tamaño más pequeño y fino */
-    font-weight: normal; /* Sin grosor excesivo */
+    top: 15px;
+    right: 20px;
+    color: #f7f7f7;
+    font-size: 50px;
+    font-weight: normal;
     cursor: pointer;
 }
 
 .close:hover {
-    color: var(--accent-color); /* Usamos el color de acento definido en :root */
+    color: var(--accent-color);
 }
