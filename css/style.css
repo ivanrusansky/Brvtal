@@ -41,16 +41,11 @@ header {
 
 /* Estilos para el favicon y el logo */
 .favicon {
-
     height: 45px;
     border-radius: 50%;
-
 }
 
-
-
 .logo {
-
     font-size: 20px;
     font-weight: 300;
     color: var(--text-color);
@@ -74,9 +69,8 @@ a[href="/index.html"]:hover {
 
 /* Ajuste del margen en formato PC */
 @media (min-width: 769px) {
-
     nav {
-        margin-left:65.5%;
+        margin-left: 65.5%;
         display: flex;
     }
 
@@ -123,10 +117,7 @@ a[href="/index.html"]:hover {
 }
 
 /* Navegación */
-
-
 nav a {
-    
     color: var(--text-color);
     text-decoration: none;
     margin-left: 5%;
@@ -288,14 +279,13 @@ textarea.form-control {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        padding: 5% !important;
-        margin: 1% !important;
+        padding: 3% !important;
+        margin: 0 !important;
         background-image: none !important;
         background-color: var(--bg-color) !important;
         min-height: 100vh;
         display: block !important;
     }
-
 
     .container {
         width: 100% !important;
@@ -306,14 +296,19 @@ textarea.form-control {
         background-color: var(--bg-color) !important;
     }
 
+    header {
+        align-items: flex-start; /* Alinear elementos en la parte superior */
+        padding-top: 10px; /* Margen superior para desplazar hacia abajo */
+    }
+
     .favicon {
         height: 35px !important;
         border-radius: 50%;
-    
+        margin-left: 10px; /* Margen a la izquierda */
     }
 
-    .faviconspace{
-        margin-bottom: 45%;
+    .faviconspace {
+        margin-bottom: 29%; /* Eliminar margen inferior grande */
     }
 
     .logo {
@@ -321,22 +316,18 @@ textarea.form-control {
         font-weight: 600;
         color: var(--text-color);
         text-decoration: none !important;
-        margin-bottom: 45%;
-        margin-left: 3% !important;
+        margin-left: 10px; /* Margen a la izquierda */
+        margin-bottom: 120px; /* Eliminar margen inferior grande */
     }
 
-    header {
-        gap: 0; /* Sin espacio en móviles */
-    }
-
-    nav{
-        margin-left: 45%;
-        margin-bottom: 15%;
+    nav {
+        margin-left: 48%;
+        margin-top: 10%; /* Alinear top con el logo */
+        margin-bottom: 10%;
     }
 
     nav a {
-        margin-left:0%;
-        
+        margin-left: 0%;
     }
 
     h1 {
@@ -376,8 +367,8 @@ textarea.form-control {
     .mobile-img-index {
         display: block;
         width: 100vw;
-        margin-left: -6%;
-        margin-right: -6%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: 0;
         margin-top: 0;
         margin-bottom: 0;
         padding: 0;
@@ -550,21 +541,27 @@ textarea.form-control {
 
 @media (max-width: 768px) {
     .footer {
-        padding: -10%;
-        width: 115%;
-        margin-left: -7%;
-        margin-right: -10%;
-        margin-top: 5%;
-        margin-bottom: -11%;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 5% !important;
+        margin-bottom: 0 !important;
+        padding: 20px !important;
+        position: relative;
+        left: 0;
+        right: 0;
     }
 
     .footer2 {
-        padding: -10%;
-        width: 115%;
-        margin-left: -7%;
-        margin-right: -10%;
-        margin-top: 5%;
-        margin-bottom: -11%;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 5% !important;
+        margin-bottom: 0 !important;
+        padding: 20px !important;
+        position: relative;
+        left: 0;
+        right: 0;
     }
 
     .footer-links {
