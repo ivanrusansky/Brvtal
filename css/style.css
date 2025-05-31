@@ -308,7 +308,7 @@ textarea.form-control {
     }
 
     .faviconspace {
-        margin-bottom: 29%; /* Eliminar margen inferior grande */
+        margin-bottom: 31%; /* Eliminar margen inferior grande */
     }
 
     .logo {
@@ -324,6 +324,7 @@ textarea.form-control {
         margin-left: 48%;
         margin-top: 10%; /* Alinear top con el logo */
         margin-bottom: 10%;
+        margin-right: 5% !important;
     }
 
     nav a {
