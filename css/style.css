@@ -313,7 +313,7 @@ textarea.form-control {
     }
 
     .faviconspace {
-        margin-bottom: 32%; /* Eliminar margen inferior grande */
+        margin-bottom: 34%; /* Eliminar margen inferior grande */
     }
 
     .logo {
@@ -322,7 +322,7 @@ textarea.form-control {
         color: var(--text-color);
         text-decoration: none !important;
         margin-left: 10px; /* Margen a la izquierda */
-        margin-bottom: 37%; /* Eliminar margen inferior grande */
+        margin-bottom: 39%; /* Eliminar margen inferior grande */
     }
 
     nav {
