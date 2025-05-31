@@ -43,6 +43,8 @@ header {
 .favicon {
     height: 45px;
     border-radius: 50%;
+    display: block; /* Asegura que el margin-bottom funcione */
+    margin-bottom: 20px; /* Aplica el margen inferior deseado */
 }
 
 .logo {
@@ -279,7 +281,7 @@ textarea.form-control {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        padding: 3% !important;
+        padding: 0 !important;
         margin: 0 !important;
         background-image: none !important;
         background-color: var(--bg-color) !important;
@@ -305,11 +307,12 @@ textarea.form-control {
         height: 35px !important;
         border-radius: 50%;
         margin-left: 10px; /* Margen a la izquierda */
-        margin-bottom: 2% !important;
+        display: block; /* Asegura que el margin-bottom funcione */
+        margin-bottom: 20px; /* Aplica el margen inferior deseado */
     }
 
     .faviconspace {
-        margin-bottom: 31%; /* Eliminar margen inferior grande */
+        margin-bottom: 30%; /* Eliminar margen inferior grande */
     }
 
     .logo {
@@ -318,18 +321,16 @@ textarea.form-control {
         color: var(--text-color);
         text-decoration: none !important;
         margin-left: 10px; /* Margen a la izquierda */
-        margin-bottom: 120px; /* Eliminar margen inferior grande */
+        margin-bottom: 30%; /* Eliminar margen inferior grande */
     }
 
     nav {
-        margin-left: 40%;
-        margin-top: 10% !important; /* Alinear top con el logo */
-        margin-bottom: 10%;
-        
+        margin-left: 45%;
+        margin-top: 10%; /* Alinear top con el logo */
+        margin-bottom: 15%;
     }
 
     nav a {
-        
         margin-left: 0%;
     }
 
