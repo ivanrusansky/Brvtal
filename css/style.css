@@ -305,6 +305,7 @@ textarea.form-control {
         height: 35px !important;
         border-radius: 50%;
         margin-left: 10px; /* Margen a la izquierda */
+        margin-bottom: 2% !important;
     }
 
     .faviconspace {
@@ -321,13 +322,14 @@ textarea.form-control {
     }
 
     nav {
-        margin-left: 48%;
-        margin-top: 10%; /* Alinear top con el logo */
+        margin-left: 40%;
+        margin-top: 10% !important; /* Alinear top con el logo */
         margin-bottom: 10%;
-        margin-right: 5% !important;
+        
     }
 
     nav a {
+        
         margin-left: 0%;
     }
 
