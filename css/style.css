@@ -282,7 +282,7 @@ textarea.form-control {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        padding: 3% !important;
+        padding: 3.2% !important;
         margin: 0 !important;
         background-image: none !important;
         background-color: var(--bg-color) !important;
