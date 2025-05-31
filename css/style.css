@@ -309,7 +309,7 @@ textarea.form-control {
         border-radius: 50%;
         margin-left: 10px; /* Margen a la izquierda */
         display: block; /* Asegura que el margin-bottom funcione */
-        margin-bottom: 20px; /* Aplica el margen inferior deseado */
+        margin-bottom: 21px; /* Aplica el margen inferior deseado */
     }
 
     .faviconspace {
@@ -322,7 +322,7 @@ textarea.form-control {
         color: var(--text-color);
         text-decoration: none !important;
         margin-left: 10px; /* Margen a la izquierda */
-        margin-bottom: 39%; /* Eliminar margen inferior grande */
+        margin-bottom: 40%; /* Eliminar margen inferior grande */
     }
 
     nav {
