@@ -44,7 +44,7 @@ header {
     height: 45px;
     border-radius: 50%;
     display: block; /* Asegura que el margin-bottom funcione */
-    margin-bottom: 20px; /* Aplica el margen inferior deseado */
+    margin-bottom: 10px; /* Aplica el margen inferior deseado */
 }
 
 .logo {
@@ -53,6 +53,7 @@ header {
     color: var(--text-color);
     text-decoration: none !important;
     margin-left: 1% !important;
+    margin-bottom: 10px;
 }
 
 .logotext {
@@ -281,7 +282,7 @@ textarea.form-control {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        padding: 0 !important;
+        padding: 3% !important;
         margin: 0 !important;
         background-image: none !important;
         background-color: var(--bg-color) !important;
@@ -325,9 +326,10 @@ textarea.form-control {
     }
 
     nav {
-        margin-left: 45%;
+        margin-left: 40%;
         margin-top: 10%; /* Alinear top con el logo */
         margin-bottom: 15%;
+        margin-right: -10%;
     }
 
     nav a {
